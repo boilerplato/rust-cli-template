@@ -9,7 +9,7 @@ First install `Boilerplato` from [here](https://github.com/boilerplato/boilerpla
 Then run,
 
 ```sh
-$ boilerplato my-rust-lib --template rust-cli-template
+$ boilerplato my-rust-cli --template rust-cli-template
 ```
 
 ## Contributing
