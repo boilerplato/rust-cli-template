@@ -53,9 +53,7 @@ postGenerate:
 helpText:
   linux:
     - '{{#if (eq license "MIT")}}{{color "Warning:" "yellow"}} Please update copyright name in the {{color "LICENSE" "green" }} file with appropriate value.{{/if}}'
-    - "\n"
   macos:
     - '{{#if (eq license "MIT")}}{{color "Warning:" "yellow"}} Please update copyright name in the {{color "LICENSE" "green" }} file with appropriate value.{{/if}}'
-    - "\n"
   all:
-    - 'Please set the Github Token to {{color "GITHUB_TOKEN" "green"}} in {{color "scripts/upload-artifacts.sh" "green"}} file to be used to upload release artifacts.'
+    - '{{color "Warning:" "yellow"}} Please set the Github Token to {{color "GITHUB_TOKEN" "green"}} in {{color "scripts/upload-artifacts.sh" "green"}} file to be used to upload release artifacts.'
