@@ -1,0 +1,20 @@
+[package]
+name = "{{packageName}}"
+version = "{{appVersion}}"
+description = "{{appDescription}}"
+homepage = "{{homepage}}"
+repository = "https://github.com/{{githubHandle}}/{{appName}}"
+keywords = {{json_str keywords}}
+categories = {{json_str categories}}
+authors = ["{{{author}}}"]
+readme = "README.md"
+license = "{{license}}"
+edition = "2018"
+
+[dependencies]
+clap = "2.33"
+colored = "1.9"
+lazy_static = "1.4.0"
+uuid = { version = "0.8", features = ["v4"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"

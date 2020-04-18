@@ -1,0 +1,27 @@
+#!/bin/bash
+
+set -e
+
+export "$(xargs <.env)"
+
+github-release upload \
+    --user {{githubHandle}} \
+    --repo {{appName}} \
+    --tag "v$1" \
+    --name "{{packageName}}-v$1-x86_64-apple-darwin.tar.gz" \
+    --file "dist/{{packageName}}-v$1-x86_64-apple-darwin.tar.gz"
+
+github-release upload \
+    --user {{githubHandle}} \
+    --repo {{appName}} \
+    --tag "v$1" \
+    --name "{{packageName}}-v$1-x86_64-unknown-linux-gnu.tar.gz" \
+    --file "dist/{{packageName}}-v$1-x86_64-unknown-linux-gnu.tar.gz"
+
+github-release upload \
+    --user {{githubHandle}} \
+    --repo {{appName}} \
+    --tag "v$1" \
+    --name "{{packageName}}-v$1-x86_64-pc-windows-gnu.zip" \
+    --file "dist/{{packageName}}-v$1-x86_64-pc-windows-gnu.zip"
+

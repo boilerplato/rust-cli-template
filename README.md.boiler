@@ -1,0 +1,38 @@
+<div align="center">
+  <a href="https://github.com/{{githubHandle}}/{{appName}}">
+    <img width="200" height="200" src="https://avatars3.githubusercontent.com/u/63495711?s=200&v=4">
+  </a>
+  <br />
+  <br />
+</div>
+
+[![Crate](https://img.shields.io/crates/v/{{packageName}}.svg)](https://crates.io/crates/{{packageName}})
+[![Contributors](https://img.shields.io/github/contributors/{{githubHandle}}/{{appName}}.svg)](https://github.com/{{githubHandle}}/{{appName}}/graphs/contributors)
+{{#if (and (eq (os null) "macos") (eq license "MIT"))}}[![MIT](https://img.shields.io/crates/l/{{packageName}}.svg)](./LICENSE){{/if}}
+{{#if (and (eq (os null) "linux") (eq license "MIT"))}}[![MIT](https://img.shields.io/crates/l/{{packageName}}.svg)](./LICENSE){{/if}}
+
+# {{appName}}
+
+{{appDescription}}
+
+## Install
+
+### Macos
+
+```sh
+ $ bash -c "$(curl -fsSL https://raw.githubusercontent.com/{{githubHandle}}/{{appName}}/master/install.sh)"
+```
+
+### Linux
+
+```sh
+ $ bash -c "$(curl -fsSL https://raw.githubusercontent.com/{{githubHandle}}/{{appName}}/master/install.sh)"
+```
+
+### Windows
+
+Please download it from [releases](https://github.com/{{githubHandle}}/{{appName}}/releases) page.
+
+## Contributing
+
+Your PRs and stars are always welcome.
