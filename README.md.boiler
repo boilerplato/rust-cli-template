@@ -17,7 +17,7 @@
 
 ## Install
 
-### Macos
+### macOS
 
 ```sh
  $ bash -c "$(curl -fsSL https://raw.githubusercontent.com/{{githubHandle}}/{{appName}}/master/install.sh)"
