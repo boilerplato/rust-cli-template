@@ -1,13 +1,14 @@
 extern crate {{replace packageName "-" "_"}};
 use clap::{App, Arg};
 use colored::*;
+use {{replace packageName "-" "_"}}::constants;
 
 fn main() {
-    let matches = App::new("{{packageName}}")
-        .version(env!("CARGO_PKG_VERSION"))
+    let matches = App::new(constants::APP_NAME)
+        .version(constants::APP_VERSION)
         .version_short("v")
-        .author("{{{author}}}")
-        .about("{{appDescription}}")
+        .author(constants::APP_AUTHOR)
+        .about(constants::APP_DESCRIPTION)
         .arg(
             Arg::with_name("filePath")
                 .help("A file path to see size")

@@ -1,13 +1,14 @@
 extern crate rust_cli_template;
 use clap::{App, Arg};
 use colored::*;
+use rust_cli_template::constants;
 
 fn main() {
-    let matches = App::new("rust_cli_template")
-        .version(env!("CARGO_PKG_VERSION"))
+    let matches = App::new(constants::APP_NAME)
+        .version(constants::APP_VERSION)
         .version_short("v")
-        .author("Rousan Ali <hello@rousan.io> (https://rousan.io)")
-        .about("A Boilerplato template for Rust CLI application.")
+        .author(constants::APP_AUTHOR)
+        .about(constants::APP_DESCRIPTION)
         .arg(
             Arg::with_name("filePath")
                 .help("A file path to see size")
